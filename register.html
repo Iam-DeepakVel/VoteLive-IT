@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <!-- Fontawesome library -->
+    <script
+      src="https://kit.fontawesome.com/894bef690e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>VoteLive | Register</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav-container">
+      <!-- Logo Container -->
+      <a href="/" class="logo">
+        <h1>VOTE<span>LIVE</span></h1>
+      </a>
+
+      <!-- Social icons -->
+      <ul class="social-icons-container">
+        <li class="singleIcon">
+          <a
+            href="https://github.com/Iam-DeepakVel"
+            target="_blank"
+            class="icon"
+          >
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+
+        <li class="singleIcon">
+          <a
+            href="https://twitter.com/Iam_DeepakVel"
+            target="_blank"
+            class="icon"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+
+        <li class="singleIcon">
+          <a
+            href="https://www.linkedin.com/in/iamdeepakvel"
+            target="_blank"
+            class="icon"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="form-style">
+      <!-- Eligible Modal -->
+      <div id="eligible-modal" class="eligible-modal hidden">
+        <h2>Congrats!You are eligible for voting</h2>
+        <div class="eligible-password-container">
+          <h3>Your password is:</h3>
+          <!-- Generated password container -->
+          <span id="password-container"></span>
+        </div>
+        <a href="./passwordValidation.html" class="login-button"> Login </a>
+      </div>
+
+      <!--Not Eligible Modal -->
+      <div id="not-eligible-modal" class="eligible-modal hidden">
+        <h2>Oops!You are not eligible for voting</h2>
+        <a href="/" class="submit-button" type="submit">Back to Home</a>
+      </div>
+
+      <!-- Form -->
+      <form id="form">
+        <legend><span class="number">1</span> Candidate Info</legend>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Enter your Name *"
+        />
+        <input
+          id="dob"
+          type="date"
+          name="dob"
+          placeholder="Enter your Date of Birth *"
+        />
+        <select id="gender" name="gender">
+          <option value="none" selected disabled hidden>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="third">Others</option>
+        </select>
+        <input
+          id="place"
+          type="text"
+          name="place"
+          placeholder="Enter your Place *"
+        />
+        <input
+          id="aadharNum"
+          type="number"
+          name="aadharNum"
+          placeholder="Enter your Aadhar number"
+        />
+        <button class="submit-button" type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="./VoteEligibity.js"></script>
+  </body>
+</html>
