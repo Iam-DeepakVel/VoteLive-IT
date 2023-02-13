@@ -49,6 +49,9 @@ const notEligibleModal = document.getElementById("not-eligible-modal");
 // Password tag
 const passwordContainer = document.getElementById("password-container");
 
+// Empty fields msg
+const emptyFieldsMsg = document.getElementById("empty-fields-msg");
+
 // updating changes in form fields to values object
 personName.addEventListener("change", (e) => {
   values.name = e.target.value;
@@ -98,6 +101,9 @@ form.addEventListener("submit", (e) => {
     // Post to API
     console.log(values);
   } else {
-    console.log("Field values cannot be empty");
+    emptyFieldsMsg.classList.remove("hidden");
+    setTimeout(() => {
+      emptyFieldsMsg.classList.add("hidden");
+    }, 3000);
   }
 });

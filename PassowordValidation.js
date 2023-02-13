@@ -24,6 +24,10 @@ const confirmPassword = document.getElementById("confirm-password");
 const voteButton = document.getElementById("vote-tag");
 const backToHomeButton = document.getElementById("back-to-home-tag");
 
+// Empty fields msg
+const emptyFieldsMsg = document.getElementById("empty-fields-msg");
+
+
 // Get the form
 let values = {};
 const form = document.getElementById("form");
@@ -64,6 +68,9 @@ form.addEventListener("submit", (event) => {
     }
   } else {
     // If field Values are empty
-    console.log("Fields Should not be empty");
+    emptyFieldsMsg.classList.remove("hidden");
+    setTimeout(() => {
+      emptyFieldsMsg.classList.add("hidden");
+    }, 3000);
   }
 });
